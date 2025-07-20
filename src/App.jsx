@@ -9,6 +9,7 @@ import DonateModal from './components/DonateModal';
 import DonatorsModal from './components/DonatorsModal';
 import Dashboard from './components/Dashboard';
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from './contract';
+import { switchToBNBChain, getCurrentNetwork } from './networks';
 import { Container, Grid, Snackbar, Alert, CircularProgress, Button, Box, Typography, CssBaseline, InputAdornment, TextField, IconButton, ToggleButton, ToggleButtonGroup, FormControl, InputLabel, Select, MenuItem, Stack, Paper, Card, CardContent, Avatar, Chip, LinearProgress, Divider } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
@@ -87,6 +88,13 @@ function App() {
         setConnecting(false);
         return;
       }
+      
+      // Switch to BNB Chain (testnet by default)
+      const networkSwitched = await switchToBNBChain('bscTestnet');
+      if (!networkSwitched) {
+        setSnackbar({ open: true, message: 'Please switch to BNB Chain network', severity: 'warning' });
+      }
+      
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       const _provider = new ethers.BrowserProvider(window.ethereum);
       setProvider(_provider);
@@ -95,7 +103,7 @@ function App() {
       setAccount(await _signer.getAddress());
       const _contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, _signer);
       setContract(_contract);
-      setSnackbar({ open: true, message: 'Wallet connected!', severity: 'success' });
+      setSnackbar({ open: true, message: 'Wallet connected to BNB Chain!', severity: 'success' });
     } catch (e) {
       setSnackbar({ open: true, message: 'Wallet connection failed', severity: 'error' });
     }
