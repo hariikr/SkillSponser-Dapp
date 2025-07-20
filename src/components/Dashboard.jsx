@@ -47,7 +47,7 @@ export default function Dashboard({ campaigns, account }) {
     badges: ['First Campaign', 'Community Favorite', 'Milestone Master'],
     recentActivity: [
       { type: 'milestone', message: 'Completed React Fundamentals module', date: '2 days ago' },
-      { type: 'support', message: 'Received 0.1 ETH from 0x1234...', date: '3 days ago' },
+      { type: 'support', message: 'Received 0.1 BNB from 0x1234...', date: '3 days ago' },
       { type: 'milestone', message: 'Started Advanced JavaScript course', date: '1 week ago' }
     ]
   };
@@ -83,7 +83,7 @@ export default function Dashboard({ campaigns, account }) {
                 {mockUserStats.totalRaised.toFixed(2)}
               </Typography>
               <Typography variant="body2" color="#94a3b8">
-                ETH Raised
+                BNB Raised
               </Typography>
             </CardContent>
           </Card>
@@ -200,7 +200,7 @@ export default function Dashboard({ campaigns, account }) {
 
                     <Stack direction="row" justifyContent="space-between" alignItems="center">
                       <Typography variant="body2" color="#94a3b8">
-                        Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} ETH</span>
+                        Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} BNB</span>
                       </Typography>
                       <Button 
                         variant="outlined" 
@@ -302,7 +302,7 @@ export default function Dashboard({ campaigns, account }) {
                 {mockSupporterStats.totalSupported}
               </Typography>
               <Typography variant="body2" color="#94a3b8">
-                ETH Supported
+                BNB Supported
               </Typography>
             </CardContent>
           </Card>
@@ -384,7 +384,7 @@ export default function Dashboard({ campaigns, account }) {
                   </Stack>
                   
                   <Typography variant="body2" color="#94a3b8" sx={{ mb: 2 }}>
-                    Supported with {learner.amount} ETH
+                    Supported with {learner.amount} BNB
                   </Typography>
 
                   <Box sx={{ mb: 2 }}>

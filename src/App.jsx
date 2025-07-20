@@ -337,12 +337,12 @@ function App() {
                       }}
                     />
                     <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 2 }}>
-                      <Typography variant="body2" color="#94a3b8">
-                        Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} ETH</span>
-                      </Typography>
-                      <Typography variant="body2" color="#94a3b8">
-                        Goal: <span style={{ color: '#f59e0b', fontWeight: 600 }}>{campaign.target} ETH</span>
-                      </Typography>
+                                    <Typography variant="body2" color="#94a3b8">
+                Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} BNB</span>
+              </Typography>
+              <Typography variant="body2" color="#94a3b8">
+                Goal: <span style={{ color: '#f59e0b', fontWeight: 600 }}>{campaign.target} BNB</span>
+              </Typography>
                     </Stack>
                     <Button 
                       variant="contained" 
@@ -396,7 +396,7 @@ function App() {
                 {campaigns.reduce((sum, c) => sum + Number(c.amountCollected), 0).toFixed(2)}
               </Typography>
               <Typography variant="body1" color="#94a3b8">
-                ETH Raised
+                BNB Raised
               </Typography>
             </Paper>
           </Grid>

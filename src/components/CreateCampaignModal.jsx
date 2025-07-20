@@ -234,7 +234,7 @@ export default function CreateCampaignModal({ open, onClose, onCreate }) {
                 fullWidth
                 multiline
                 rows={2}
-                placeholder="e.g., Course fee: 2 ETH, Materials: 0.5 ETH, Certification: 0.3 ETH"
+                placeholder="e.g., Course fee: 2 BNB, Materials: 0.5 BNB, Certification: 0.3 BNB"
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     '& fieldset': { borderColor: '#475569' },
@@ -247,7 +247,7 @@ export default function CreateCampaignModal({ open, onClose, onCreate }) {
               />
 
               <TextField
-                label="Total Target (ETH)"
+                label="Total Target (BNB)"
                 name="target"
                 value={form.target}
                 onChange={handleChange}

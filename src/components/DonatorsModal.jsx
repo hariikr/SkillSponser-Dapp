@@ -74,7 +74,7 @@ export default function DonatorsModal({ open, onClose, donators, donations }) {
             </Box>
             <Box sx={{ textAlign: 'right' }}>
               <Typography variant="h6" sx={{ color: '#10b981', fontWeight: 600 }}>
-                {totalSupport.toFixed(4)} ETH
+                {totalSupport.toFixed(4)} BNB
               </Typography>
               <Typography variant="body2" color="#94a3b8">
                 Total raised
@@ -148,7 +148,7 @@ export default function DonatorsModal({ open, onClose, donators, donations }) {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.5 }}>
                           <FavoriteIcon sx={{ fontSize: 16, color: '#ef4444' }} />
                           <Typography variant="body2" color="#94a3b8">
-                            Supported with <span style={{ color: '#10b981', fontWeight: 600 }}>{donations[i]} ETH</span>
+                            Supported with <span style={{ color: '#10b981', fontWeight: 600 }}>{donations[i]} BNB</span>
                           </Typography>
                         </Box>
                       }

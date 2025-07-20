@@ -91,7 +91,7 @@ export default function DonateModal({ open, onClose, onDonate }) {
                 <MenuItem value="crypto" sx={{ color: '#f8fafc' }}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <PaymentIcon sx={{ fontSize: 20 }} />
-                    Cryptocurrency (ETH)
+                    Cryptocurrency (BNB)
                   </Box>
                 </MenuItem>
                 <MenuItem value="stripe" sx={{ color: '#f8fafc' }}>
@@ -125,7 +125,7 @@ export default function DonateModal({ open, onClose, onDonate }) {
                 {presetAmounts.map((presetAmount) => (
                   <Chip
                     key={presetAmount}
-                    label={`${presetAmount} ETH`}
+                    label={`${presetAmount} BNB`}
                     onClick={() => setAmount(presetAmount.toString())}
                     sx={{
                       background: amount === presetAmount.toString()
@@ -145,7 +145,7 @@ export default function DonateModal({ open, onClose, onDonate }) {
 
             {/* Custom Amount */}
             <TextField
-              label="Custom Amount (ETH)"
+              label="Custom Amount (BNB)"
               value={amount}
               onChange={e => setAmount(e.target.value)}
               type="number"

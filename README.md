@@ -86,7 +86,7 @@ SkillSponsor transforms the way people access education by creating a decentrali
 - Node.js (v16 or higher)
 - npm or yarn package manager
 - MetaMask browser extension
-- Sepolia testnet ETH for testing
+- Sepolia testnet BNB for testing
 
 ### Installation
 

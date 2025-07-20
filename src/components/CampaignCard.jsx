@@ -213,10 +213,10 @@ export default function CampaignCard({ campaign, onDonate, onViewDonators, isOwn
           />
           <Stack direction="row" justifyContent="space-between" alignItems="center">
             <Typography variant="body2" color="#94a3b8">
-              Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} ETH</span>
+              Raised: <span style={{ color: '#10b981', fontWeight: 600 }}>{campaign.amountCollected} BNB</span>
             </Typography>
             <Typography variant="body2" color="#94a3b8">
-              Goal: <span style={{ color: '#f59e0b', fontWeight: 600 }}>{campaign.target} ETH</span>
+              Goal: <span style={{ color: '#f59e0b', fontWeight: 600 }}>{campaign.target} BNB</span>
             </Typography>
           </Stack>
         </Box>

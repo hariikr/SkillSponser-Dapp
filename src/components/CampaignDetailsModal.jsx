@@ -66,8 +66,8 @@ export default function CampaignDetailsModal({ open, onClose, campaign, donators
           <Typography variant="body2"><b>Deadline:</b> {deadlineDate ? deadlineDate.toLocaleString() : 'N/A'}</Typography>
         </Stack>
         <Stack direction="row" spacing={2} sx={{ mb: 1 }}>
-          <Typography variant="body2"><b>Target:</b> {campaign.target} ETH</Typography>
-          <Typography variant="body2"><b>Raised:</b> {campaign.amountCollected} ETH</Typography>
+          <Typography variant="body2"><b>Target:</b> {campaign.target} BNB</Typography>
+          <Typography variant="body2"><b>Raised:</b> {campaign.amountCollected} BNB</Typography>
         </Stack>
         <Typography variant="body2" sx={{ mb: 1 }}><b>Countdown:</b> {countdown}</Typography>
         <Divider sx={{ my: 2 }} />
@@ -79,7 +79,7 @@ export default function CampaignDetailsModal({ open, onClose, campaign, donators
             {donators.map((addr, i) => (
               <Stack direction="row" spacing={1} key={addr + i} alignItems="center">
                 <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>{addr.slice(0, 6)}...{addr.slice(-4)}</Typography>
-                <Typography variant="body2">donated {donations[i]} ETH</Typography>
+                <Typography variant="body2">donated {donations[i]} BNB</Typography>
               </Stack>
             ))}
           </Stack>
